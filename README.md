@@ -27,17 +27,29 @@ raw_data
         -task3-dev-with-answer.json
 
 # train.csv格式如下
+# task1没有reason，因此处理的时候直接设置为“空”，task2格式一致，有reason。
 data/task1/train.csv
 context,reason,judge
 后来，在全行上下寻找“金穗”“的过程中，为了能吸引“金穗”“的注意，钱鹤鸣把小红莲亲属的来信和小红莲的照片贴到了办公室底的宣传栏上，看谁来取。他这时模模糊糊猜想可能是张培英。,空,0
 在××戏院里，我看见住着几十位伤兵，中间有五六个重伤的兵士，或在腰上，或在腿上，中着炮弹；还有正在生病的。我们找他们的管事人，想商量一个办法，据说他安住在城下旅馆里。在戏院里的一角上，用两张椅子并起来，铺着一点稻草，一个面黄肌瘦的兵，裹着一条灰色的毯子，勉强撑起半截身子招呼我们，说他腿上受着重伤，而且又病了，睡在这儿冷得发抖，“能求你替我想想法子吗？”在他那双大而黑的眼睛里，带着失望与希求的神色，闪着晶莹的泪光。我们随即跑到医院里，请他们立刻教人去那儿检查，把重病的抬到医院里去。,空,0
+
 ```
 # logs
+## task1
 version1 表示 cls
 
 version2 表示 mean
 
 version3 表示 cls+rdrop 1.0
+
+version4 表示 mean+rdrop 1.0
+
+## task2
+version1 表示 cls
+
+version2 表示 mean
+
+version3 表示 cls+rdrop 0.5
 
 version4 表示 mean+rdrop 0.5
 
